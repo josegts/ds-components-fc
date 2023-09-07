@@ -1,0 +1,78 @@
+{
+  "name": "@josegts/ds-components",
+  "description": "A React component library built with TypeScript, Storybook, and Vite.",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "npx tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest --coverage",
+    "test:ui": "vitest --ui --coverage",
+    "refreshVSToken": "better-vsts-npm-auth -config .npmrc"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.7",
+    "better-vsts-npm-auth": "^7.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vsts-npm-auth": "^0.42.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.4.0",
+    "@storybook/addon-interactions": "^7.4.0",
+    "@storybook/addon-links": "^7.4.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.0",
+    "@storybook/react": "^7.4.0",
+    "@storybook/react-vite": "^7.4.0",
+    "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.4",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "@vitest/coverage-istanbul": "^0.34.3",
+    "@vitest/coverage-v8": "^0.34.3",
+    "@vitest/ui": "^0.34.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
+    "jsdom": "^22.1.0",
+    "storybook": "^7.4.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3",
+    "vitest": "^0.34.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/josegts"
+  },
+  "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josegts/ds-components-fc.git"
+  }
+}
