@@ -1,14 +1,40 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended'],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'standard-with-typescript',
+    'eslint-config-prettier',
+  ],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  plugins: ['react'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
+    'no-extra-boolean-cast': 0,
+    '@typescript-eslint/explicit-function-return-type': ['off'],
+    '@typescript-eslint/consistent-type-assertions': ['off'],
+    '@typescript-eslint/strict-boolean-expressions': ['off'],
+    'react/display-name': ['off'],
+    '@typescript-eslint/restrict-template-expressions': ['off'],
+    '@typescript-eslint/no-misused-promises': [
+      2,
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
     ],
   },
-}
+};
