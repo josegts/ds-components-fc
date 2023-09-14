@@ -13,12 +13,6 @@ export default defineConfig({
   minify: true,
   dts: true,
   format: ['cjs', 'esm'],
-  external: [
-    'react',
-    'react-dom',
-    '@emotion/react',
-    '@emotion/styled',
-    '@mui/material',
-  ],
+  external: ['react', 'react-dom'],
   esbuildPlugins: [],
 });
